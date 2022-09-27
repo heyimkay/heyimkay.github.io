@@ -366,7 +366,7 @@ svg {
 .btn:hover {
     transition: 1s ease-in-out;
     background: #fff;
-    color: #333;
+    color: #5097ff;
 }
 
 .btn:hover svg {
