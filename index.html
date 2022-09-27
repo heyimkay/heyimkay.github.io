@@ -7,11 +7,10 @@
         <title class="lang" key="title">Kay Yonehara UI/UX Designer Portfolio Site</title>
         <meta property="og:image" content="assets/TOP-BG.jpg">
         <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="normalize.css" rel="stylesheet" type="text/css">
         <link href="site.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="jquery.min.js"></script>
-        <script src="language.js"></script>
+        <script src="gradient.js"></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179938914-1"></script>
         <script>
@@ -21,112 +20,28 @@
 
           gtag('config', 'UA-179938914-1');
         </script>
+        <script>
+            window.addEventListener('DOMContentLoaded', (e) => {
+            var gradient = new Gradient;
+            gradient.initGradient("#gradient-canvas");
+            });
+        </script>
         <script src="https://unpkg.com/scrollreveal"></script>
     </head>
     <body> 
-        <header class="page-header">
-            <div class ="container">
-                <nav>
-                    <a href=""><img class="logo" src="assets/logo.svg"></a>
-                    <ul class = "menu">
-                        <!---<li class="item resume"><a href="files/EN-JP-CV.pdf" target="_blank" class="lang" key="resume">Resume</a></li>--->
-                        <li class="item lang-button" onclick="">
-                            <div id="language-toggle" onclick="">
-                                <a  class="translate on" id="en">A</a>
-                                <a class="translate" id="jp">あ</a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+    
         <div class="section top">
             <div class="title">
-                <h1 class="english">Design solutions for humans</h1>
-                <h1 class="jp-top japanese" >人にうれしい<br/>デザイン<br/>ソリューション</h1>
+                <h1 class="english">Hey, I'm Kay</h1>
+                <p>I’m a user-centric UI/UX Designer from Hawai’i, currently based in Tokyo. See my pdf portfolio below!</p>
                 <a href="files/Portfolio2020.pdf" class="portfolio" id="portfolio" target=”_blank>
-                    <svg width="13px" height="10px" viewBox="0 0 13 10">
-                        <path d="M1,5 L11,5"></path>
-                        <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                     <span>Portfolio</span>
+                     <button class="btn">
+                        <span>Download (PDF)</span>
+                  </button>
                 </a>
             </div>
-            <div class="top-bg">
-                    <img id="top" src="assets/TOP-BG.jpg"/>
-            </div>
         </div>
-        <div class="section about">
-            <div class="intro-about-container">
-                <div class="about-absolute bottom english">Lifelong Learner</div>
-                <div class="about-absolute bottom japanese">生涯学習者</div>
-                <div class="about-absolute top english">UI/UX Designer</div>
-                <div class="about-absolute top japanese">UI/UX デザイナー</div>
-                <div class="about-absolute right english">Dog person</div>
-                <div class="about-absolute right japanese">犬派</div>
-                <div class="about-absolute left english">Foodie</div>
-                <div class="about-absolute left japanese">食通</div>
-                <div class="intro-about">
-                    Hey, I’m Kay! <br>
-                    I’m a UI/UX designer 
-                    born and raised in 
-                    Hawaii, based in Tokyo.
-                </div>
-                <!---<div class="intro-about japanese">
-                    Hey, I’m Kay! <br>
-                    ハワイ生まれ育ち、東京にいる
-                    UI/UXデザイナー！
-                </div>--->
-            </div>
-        </div>
-        <div class="section forfuns">
-
-                <div class="forfuntext right">
-                    <p class="fun-title english">For fun things!</p>
-                    <p class="fun-title japanese">スキマ時間に</p>
-                    <p class="fun-copy english">
-                        I love exploring and playing with various design techniques and technologies! Here are some of the things I’ve been working on in my spare time. 
-                    </p>
-                     <p class="fun-copy japanese">
-                        時間があったら新しいテクノリジーや<br>デザインなどを勉強して楽しんでいる。これは私が作ったものです！
-                    </p>
-                </div>
-                <div class="grid right">
-                    <div class="forfun fun1">
-                        <img src="assets/forfun1.jpg">
-                    </div>
-                    <div class="forfun fun2">
-                        <img src="assets/forfun2.gif">
-                    </div>
-                    <div class="forfun fun3">
-                        <img src="assets/forfun3.gif">
-                    </div>
-                    <div class="forfun fun4">
-                        <img src="assets/forfun4.jpg">
-                    </div>
-                </div>
-        </div>
-        <div class="section footer">
-            <div class="contact">
-                <div class="email">
-                    <p class="english">I’m always up for new adventures and opportunities. Feel free to say hello at <a href="mailto:kyonehara.work@gmail.com"><span class="emailaddress">kyonehara.work@gmail.com</span></a>
-                    </p>
-                    <p class="japanese">多くのスタートアップや大企業のプロジェクト依頼を受け取りました。ぜひ、あなたのプロジェクトを聞かせてください：<a href="mailto:kyonehara.work@gmail.com"><span class="emailaddress">kyonehara.work@gmail.com</span></a>
-                    </p>
-                    <div class="sns-links">
-                    <a href="https://www.linkedin.com/in/kaysha-yonehara-925121107/" class="sns one" target=”_blank>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://dribbble.com/heyimkay" class="sns two" target=”_blank>
-                        <span>Dribbble</span>
-                    </a>    
-                    </div>
-                </div>
-                <div class="footerlight">
-                    <img src="assets/lightbulb.svg">
-                </div>
-            </div>   
-        </div>
+         <canvas id="gradient-canvas"></canvas>
         <script src="main.js"></script>
 
     </body>

@@ -7,16 +7,15 @@
 body {
     margin: 0 auto;
     position: relative;
-    font-family: "Raleway", sans-serif;
+    font-family: "Raleway", sans-serif;   
 }
 
 h1 {
-    font-family: "Poppins", serif;
-    font-size: 48px;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 44px;
     font-weight: 600;
-    margin-bottom: 40px;
-    color: #262626;
-    max-width: 380px;
+    margin-bottom: 20px;
+    color: #fff;
 }
 header {
     padding: 10px 0px;
@@ -24,11 +23,16 @@ header {
     display: flex;
 }
 p {
-    margin: 20px 0 50px 0;
+    margin: 28px 0;
+    line-height: 160%;
+    color: #fff;
 }
 .title {
     margin-top: 8%;
     z-index: 1;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .top-bg img {
@@ -43,25 +47,19 @@ p {
 }
 
 .section.top {
-    margin-bottom: 25px;
-    width: 90%;
+    position: absolute;
+    /*width: 90%;*/
     margin-left: auto;
     margin-right: auto;
     max-width: 1320px;
-    position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
-canvas {
-    height: 100%;
-    width: 100%;
-}
 button {
     padding: 18px 24px;
-    border-radius: 40px;
+    border-radius: 12px;
     width: 200px;
-    margin-right: 20px;
-    margin-top: 30px;
 }
 
 .container {
@@ -76,59 +74,6 @@ a {
     color: inherit;
 }
 
-.portfolio {
-  position: relative;
-  margin: auto;
-  padding: 19px 22px;
-  transition: all 0.2s ease;
-}
-.portfolio:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  background: #F5DC2D;
-  width: 56px;
-  height: 56px;
-  transition: all 0.3s ease;
-}
-.portfolio span {
-  position: relative;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 900;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-.portfolio svg {
-  position: relative;
-  top: 0;
-  margin-left: 3px;
-  margin-right: 10px;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke: #262626;
-  stroke-width: 2;
-  transform: translateX(-5px);
-  transition: all 0.3s ease;
-}
-.portfolio:hover:before {
-  width: 100%;
-  background: #262626;
-}
-.portfolio:hover svg {
-    transform: translateX(0);
-    stroke: #fff;
-}
-.portfolio:hover {
-    color: white;
-}
-.portfolio:active {
-  transform: scale(0.96);
-}
 
 .logo {
     width: 30px;
@@ -154,81 +99,6 @@ nav ul {
 
 nav li {
     display: inline-block;
-}
-
-.lang-button {
-    width: 66px;
-    height: 36px;
-    background-color: #f5f5f5;
-    border-radius: 60px;
-    -webkit-border-radius: 60px;
-    -moz-border-radius: 60px;
-    -ms-border-radius: 60px;
-    -o-border-radius: 60px;
-    position: relative;
-    cursor: pointer;
-}
-.language-toggle {
-    font-size: 16px;
-}
-
-a#en, a#jp {
-    padding: 6px;
-    display: block;
-    position: absolute;
-    text-align: center;
-    top: 4px;
-}
-a#jp {
-    right: 4px;
-}
-a#en {
-    left: 4px;
-}
-
-.translate.on, a#en:active, a#jp:active {
-    width: 28px;
-    height: 28px;
-    background: #fff;
-    border-radius: 60%;
-    font-weight: 700;
-    color: #21BEE0;
-}
-
-li.item.resume {
-    float: left;
-    margin-top: 11px;
-    margin-right: 20px;
-}
-.desc2 {
-    margin-top: 40px;
-    display: none;
-}
-a:focus {
-outline: none!important;
-}
-
-.footer {
-    min-height: 100vh;
-    background-color: #2C2C2C;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    position: relative;
-    overflow: hidden;
-}
-
-.contact {
-    width: 90%;
-    max-width: 1320px;
-}
-
-.email {
-    width: 60%;
-    display: inline-block;
-    font-weight: bold;
 }
 
 .footerlight {
@@ -348,36 +218,6 @@ p.fun-title {
     bottom: 0px;
 }
 
-.contact p.japanese {
-    font-weight: 500;
-    font-size: 40px;
-}
-h1.jp-top.japanese {
-    font-size: 60px;
-    line-height: 80px;
-}
-@media only screen and (max-width: 600px)  {
-    a.lang {
-        display: none;
-    }
-    video[poster] {
-        opacity: 0.7;
-    }
-    .contact p {
-        font-size: 25px;
-    }
-    .forfuntext::after {
-        background-image: none;
-        width: 1px;
-    }
-    .contact p.japanese {
-        font-size: 20px;
-    }
-    h1.jp-top.japanese {
-        font-size: 40px;
-        line-height: 60px;
-    }
-}
 
 @media only screen and (max-width: 330px) {
      .contact p {
@@ -433,54 +273,10 @@ h1.jp-top.japanese {
         width: 650px;
         right: -80px;
     }
-    h1{
-        font-size: 50px;
-    }
-h1.jp-top.japanese {
-    font-size: 45px;
-    line-height: 60px;
-    margin-top: 50px;
-}
-    .contact p.japanese {
-        font-size: 32px;
-    }
-    
-    .section.top {
-        height: 420px;
-    }
-    .contact p {
-        font-size: 35px;
-    }
-    .footerlight img {
-        width: 250px;
-        position: absolute;
-        top: 130px;
-        right: 40px;
-    }
-    .grid {
-        grid-template-columns: repeat(2,minmax(0,1fr));
-        grid-row-gap: 3.5625vw;
-        grid-column-gap: 3.604167vw;
-    }
-    .forfun {
-        padding-bottom: 0px;
-    }
-    .forfun.fun2 {
-        transform: translate3d(0px, 21.2905px, 0px);
-    }
-    .forfun.fun4 {
-        transform: translate3d(0px, 21.2905px, 0px);
-    }
-    p.fun-title {
-        margin-top: 0px;
+  grid-column-gap: 3.604167vw;
     }
 
-    p.fun-copy {
-        margin-bottom: 30px;
-    }
-    .section.forfuns {
-        padding: 60px;
-    }
+
 }
 @media only screen and (min-width: 1000px) {
     .top-bg img {
@@ -506,11 +302,6 @@ h1.jp-top.japanese {
         grid-row-gap: 1.5625vw;
         grid-column-gap: 1.604167vw;
     }
-    h1.jp-top.japanese {
-        font-size: 54px;
-        margin-top: 50px;
-        line-height: 80px;
-    }
     
 }
 
@@ -521,8 +312,6 @@ h1.jp-top.japanese {
         line-height: 98px;
     }
     h1 {
-        font-size: 70px;
-        line-height: 90px;
         max-width: 440px;
     }
     .section.top {
@@ -551,4 +340,72 @@ h1.jp-top.japanese {
         left: 270px;
         bottom: 0px;
     }
+}
+
+
+
+.btn {
+  height: 54px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #fff;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+    transition: 1s ease-in-out;
+    background: #fff;
+    color: #333;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+/*#gradient-canvas {
+	width: 100%;
+	height: 100%;
+	--gradient-color-1: #c3e4ff;
+	--gradient-color-2: #6ec3f4;
+	--gradient-color-3: #eae2ff;
+	--gradient-color-4: #b9beff;
+}*/
+
+#gradient-canvas {
+  width:100%;
+  height:100%;
+  --gradient-color-1: #d08fff; 
+  --gradient-color-2: #abcbf7; 
+  --gradient-color-3: #9882f4;  
+}
+
+.btn {
+	position: relative;
+	color: #fff;
+	width: 100%;
+	max-width: 250px;
+	height: 52px;
+  overflow:hidden;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  z-index: 1 !important;
+}
+.btn:hover{
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+.btn:focus{
+    color: rgba(13, 13, 13, 1) !important;
 }
