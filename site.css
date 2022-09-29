@@ -11,11 +11,12 @@ body {
 }
 
 h1 {
-    font-family: "Playfair Display", sans-serif;
+    font-family: "Libre Baskerville", sans-serif;
     font-size: 44px;
     font-weight: 600;
     margin-bottom: 20px;
     color: #fff;
+    letter-spacing: 0px;
 }
 header {
     padding: 10px 0px;
