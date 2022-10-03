@@ -66,41 +66,18 @@ a {
     color: inherit;
 }
 
+@media only screen and (max-width: 600px) and (min-width: 300px)   {
+    .section.top{
+        width: 90%;
+    }
+    h1{
+        font-size: 34px;
+    }
+}
+
 
 
 @media only screen and (min-width: 767px)  {
-    .intro-about {
-        max-width: 404px;
-        font-size: 45px;
-        padding-top: 0px;
-    }
-    .section.about{
-        height: 768px;
-    }
-    .about-absolute {
-        position: absolute;
-        font-size: 30px;
-    }
-    .about-absolute.right.japanese {
-        right: 20px;
-    }
-    .about-absolute.right {
-        right: -30px;
-        transform: rotate(90deg);
-    }
-    .about-absolute.top{
-        top: -130px;
-    }
-    .about-absolute.right.japanese {
-        right: 20px;
-    }
-    .about-absolute.left {
-        left: 30px;
-        transform: rotate(-90deg);
-    }
-    .about-absolute.bottom {
-        bottom: -130px;
-    }
     .top-bg img {
         position: absolute;
         width: 650px;
@@ -110,21 +87,7 @@ a {
     }
 
 
-}
 @media only screen and (min-width: 1000px) {
-    .top-bg img {
-        width: 100%;
-        max-width: 1045px;
-    }
-    .section.top {
-        height: 560px;
-    }
-    .top-bg img {
-        right: -40px;
-    }
-    .contact p {
-        font-size: 45px;
-    }
     .footerlight img {
         margin-left: 50px;
     }
@@ -164,12 +127,6 @@ a {
         padding: 100px;
     }
 
-}
-@media only screen and (min-width: 2000px) {
-    .forfuntext::after {
-        left: 270px;
-        bottom: 0px;
-    }
 }
 
 
