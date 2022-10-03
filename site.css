@@ -15,7 +15,7 @@ h1 {
     font-size: 44px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #fff;
+    color: #418BFA;
     letter-spacing: 0px;
 }
 header {
@@ -26,24 +26,13 @@ header {
 p {
     margin: 28px 0;
     line-height: 160%;
-    color: #fff;
+    color: #418BFA;
 }
 .title {
     z-index: 1;
     max-width: 440px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.top-bg img {
-    max-width: 100%;
-    margin-top: 40px;
-}
-
-.section {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
 }
 
 .section.top {
@@ -78,165 +67,6 @@ a {
 }
 
 
-.logo {
-    width: 30px;
-    float: left;
-}
-
-
-ul.menu {
-    float: right;
-}
-
-header::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav li {
-    display: inline-block;
-}
-
-.footerlight {
-    width: 50%;
-    display: inline;
-}
-
-a.sns.two {
-    padding-left: 30px;
-}
-.sns {
-    opacity: .5;
-}
-.sns::hover {
-    opacity: 1;
-}
-.contact p {
-    font-size: 45px;
-}
-
-.footerlight img {
-    max-width: 100%;
-    margin-top: 50px;
-    width: 300px;
-}
-
-span.emailaddress {
-    color: #2CBCDB;
-    position: relative;
-}
-
-span.emailaddress::after {
-    content: "";
-    position: absolute;
-    border: 1px solid #2CBCDB;
-    width: 100%;
-    left: 0;
-    bottom: 5px;
-}
-.section.about {
-    width: 100%;
-    height: 620px;
-    background-color: #21BEE0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-
-.intro-about-container {
-    width: calc(100% - 40px);
-    min-height: unset;
-    flex-direction: column;
-    position: relative;
-    max-width: 1320px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.intro-about {
-    padding-top: 40px;
-    line-height: 60px;
-    font-size: 40px;
-    display: inline-flex;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-}
-
-.about-absolute {
-    font-size: 20px;
-    padding-bottom: 5px;
-}
-
-p.fun-copy.japanese {
-    line-height: initial;
-}
-.section.forfuns {
-    background: #F5DC2D;
-    text-align: center;
-    display: flex;
-    position: relative;
-}
-p.fun-title {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 30px;
-    margin-bottom: 25px;
-    margin-top: 60px;
-}
-.grid {
-    display: grid;
-    margin: auto;
-    z-index: 1;
-}
-.forfun {
-    padding-bottom: 30px;
-}
-.forfuntext {
-    width: 290px;
-    margin: auto;
-    color: #262626;
-}
-.forfuntext::after {
-    content: "";
-    width: 950px;
-    height: 710px;
-    background-size: contain;
-    background-image: url(assets/fun-BG.svg);
-    background-repeat: no-repeat;
-    position: absolute;
-    left: -240px;
-    bottom: 0px;
-}
-
-
-@media only screen and (max-width: 330px) {
-     .contact p {
-    font-size: 20px;
-    }
-    .intro-about {
-        font-size: 35px;
-        line-height: 53px;
-    }
-}
-
-@media only screen and (max-width: 730px) {
-    .footerlight {
-        display: none;
-    }
-}
 
 @media only screen and (min-width: 767px)  {
     .intro-about {
@@ -348,7 +178,7 @@ p.fun-title {
   height: 54px;
   cursor: pointer;
   background: transparent;
-  border: 1px solid #fff;
+  border: 1px solid #418BFA;
   outline: none;
   transition: 1s ease-in-out;
 }
@@ -374,15 +204,17 @@ svg {
   stroke-dashoffset: -480;
 }
 
-/*#gradient-canvas {
+/*light BG*/
+#gradient-canvas {
 	width: 100%;
 	height: 100vh;
 	--gradient-color-1: #c3e4ff;
-	--gradient-color-2: #6ec3f4;
+	--gradient-color-2: #A0D2FF;
 	--gradient-color-3: #eae2ff;
 	--gradient-color-4: #b9beff;
-}*/
+}
 
+/*dark BG
 #gradient-canvas {
     width:100%;
     height:100vh;
@@ -390,11 +222,11 @@ svg {
     --gradient-color-2: #abcbf7; 
     --gradient-color-3: #9882f4;  
     --gradient-color-4: #5097ff;  
-}
+}*/
 
 .btn {
 	position: relative;
-	color: #fff;
+	color: #418BFA;
 	width: 100%;
 	max-width: 250px;
 	height: 52px;
