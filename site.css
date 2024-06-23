@@ -1,58 +1,68 @@
-body {
+html,body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
-  color: #1c1c1c;
+  color: #fff;
+    height: 100%;
+    position: relative;
+}
+
+#gradient-canvas {
+  width:100vw;
+  height:100vh;
+  --gradient-color-1: #1775D5; 
+  --gradient-color-2: #0057B2; 
+  --gradient-color-3: #003C91;  
+  --gradient-color-4: #002371;
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
- /* text-align: center;*/
+    position: relative;
+text-align: left;
+    height: 100%;
 }
 
-.header {
-  text-align: left;
-  background-color: #F7F7F9;
-  padding: 60px 0;
+.intro{
+    position: absolute;   
+    transform: translateY(50%);
+
 }
+
 
 .header h1 {
   font-family: "Cormorant", serif;
   font-size: 64px;
-  font-weight: 400;
-  color: #5094F8;
+  font-weight: 300;
+  color: #fff;
   max-width: 680px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
 }
 
 .header p {
   font-size: 18px;
-  color: #1c1c1c;
 }
 
 .header .btn {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 24px;
-  background-color: #5094F8;
+  background-color: none;
+    border: 1px solid white;
   color: #fff;
   border-radius: 50px;
   text-decoration: none;
 }
 
 .btn:hover{
-    background-color: #3176DC;
+    background-color: #fff;
+    color: #5094F8;
 }
 
-.profile {
-  background-color: #5094F8;
-  padding: 60px 0;
-  color: #fff;
-    height: 500px;
-    
-}
 
 .profile-content {
   position: relative;
@@ -66,81 +76,16 @@ body {
   top: -120px;
 }
 
-#skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  max-width: 475px;
-}
-
-
-#skills-container {
-  position: relative;
-  width: 100%;
-    max-width: 330px;
-  height: 300px; /* Adjust as needed */
-  overflow: hidden;
-  background: transparent;
-    padding-top: 150px;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skill-chip {
-  background-color: #C8E2F4;
-  color: #1c1c1c;
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-size: 20px;
-  cursor: pointer;
-  user-select: none;
-  border: 1px solid #1c1c1c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-    position: relative;
-}
-
-
 
 /* Responsive Design */
-@media (max-width: 1100px) {
-  .profile-image {
-    left: 500px;
-    top: -120px;
-  }
-}
-
 @media (max-width: 768px) {
   .header h1 {
     font-size: 2em;
   }
-
-  .profile-content {
-    flex-direction: column;
-  }
-
-  .skills {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profile-image {
-    left: 420px;
-    top: -120px;
-    max-width: 240px;
-  }
+    .container {
+        text-align: center;
+    }
+    .header p {
+  font-size: 16px;
 }
-
-@media (max-width: 767px) {
-  .profile-image {
-    max-width: 210px;
-    left: 17%;
-    top: -90px;
-  }
 }
