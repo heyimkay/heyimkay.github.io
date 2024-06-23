@@ -2,6 +2,12 @@
 
 window.addEventListener('load', function () {
     // Matter.js module aliases
+    console.log("Loading Matter.js...");
+    if (!Matter) {
+        console.error("Matter.js not loaded!");
+        return;
+    }
+
     var Engine = Matter.Engine,
         Render = Matter.Render,
         Runner = Matter.Runner,
