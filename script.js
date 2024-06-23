@@ -1,13 +1,9 @@
 "use strict";
 
 window.addEventListener('load', function () {
-    // Matter.js module aliases
-    console.log("Loading Matter.js...");
-    if (!Matter) {
-        console.error("Matter.js not loaded!");
-        return;
-    }
+    console.log("Script is running");
 
+    // Matter.js module aliases
     var Engine = Matter.Engine,
         Render = Matter.Render,
         Runner = Matter.Runner,
@@ -47,6 +43,19 @@ window.addEventListener('load', function () {
         Bodies.rectangle(render.options.width + 10, render.options.height / 2, 20, render.options.height, { isStatic: true }) // Right wall
     ];
     Composite.add(world, walls);
+
+    // Add mouse control
+    var mouse = Mouse.create(render.canvas);
+    var mouseConstraint = MouseConstraint.create(engine, {
+        mouse: mouse,
+        constraint: {
+            stiffness: 0.2,
+            render: {
+                visible: false
+            }
+        }
+    });
+    Composite.add(world, mouseConstraint);
 
     // Create skill chips
     var skillChips = document.querySelectorAll('.skill-chip');
@@ -94,19 +103,6 @@ window.addEventListener('load', function () {
             };
         });
     });
-
-    // Add mouse control
-    var mouse = Mouse.create(render.canvas);
-    var mouseConstraint = MouseConstraint.create(engine, {
-        mouse: mouse,
-        constraint: {
-            stiffness: 0.2,
-            render: {
-                visible: false
-            }
-        }
-    });
-    Composite.add(world, mouseConstraint);
 
     // Keep the mouse in sync with rendering
     render.mouse = mouse;
