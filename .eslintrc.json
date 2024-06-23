@@ -1,0 +1,17 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "Matter": "readonly"
+  },
+  "rules": {
+    "no-console": "off",
+    "no-undef": "off",
+    "no-unused-vars": "warn"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2015
+  }
+}

@@ -1,48 +1,41 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="I'm Kay, a UI/UX Designer based in Tokyo,Japan"/>
-        <title class="lang" key="title">Kay Yonehara UI/UX Designer Portfolio Site</title>
-        <meta property="og:image" content="assets/TOP-BG.jpg">
-        <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link href="normalize.css" rel="stylesheet" type="text/css">
-        <link href="site.css" rel="stylesheet" type="text/css">
-        <script src="gradient.js"></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179938914-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'UA-179938914-1');
-        </script>
-        <script>
-            window.addEventListener('DOMContentLoaded', (e) => {
-            var gradient = new Gradient;
-            gradient.initGradient("#gradient-canvas");
-            });
-        </script>
-        <script src="https://unpkg.com/scrollreveal"></script>
-    </head>
-    <body> 
-    
-        <div class="section top">
-            <div class="title">
-                <h1 class="english">Hey, I'm Kay</h1>
-                <p>I’m a user-centric UI/UX Designer from Hawai’i, currently based in Tokyo. See my pdf portfolio below!</p>
-                <a href="https://drive.google.com/file/d/1TYIRZr8EYvYVI5zWiEyIwwUYWtqbsylO/view?usp=sharing" class="portfolio" id="portfolio" target=”_blank>
-                     <button class="btn">
-                        <span>Download (PDF)</span>
-                  </button>
-                </a>
-            </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kay's Portfolio</title>
+  <meta property="og:image" content="assets/TOP-BG.jpg">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="site.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179938914-1"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>A multidisciplinary designer based in Tokyo</h1>
+      <p>Hey, I'm Kay, nice to meet you! See my latest work in the PDF portfolio below:</p>
+      <a href="https://drive.google.com/file/d/1VaSB6MgERxfKvyGCPicRbbUPWaDRCNfK/view?usp=sharing" target=”_blank” class="btn">Download (PDF)</a>
+    </div>
+  </header>
+  <section class="profile">
+    <div class="container">
+      <div class="profile-content">
+        <img src="assets/profile.png" alt="Kay's Profile Image" class="profile-image">
+        <div id="skills-container">
+          <span class="skill-chip UI">UI/UX Design</span>
+          <span class="skill-chip Visual">Visual Design</span>
+          <span class="skill-chip Strategy">Strategy</span>
+          <span class="skill-chip Branding">Branding</span>
+          <span class="skill-chip Motion">Motion Design</span>
         </div>
-         <canvas id="gradient-canvas"></canvas>
-        <script src="main.js"></script>
-
-    </body>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
 </html>
