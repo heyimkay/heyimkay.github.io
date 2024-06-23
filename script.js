@@ -44,53 +44,6 @@ window.addEventListener('load', function () {
     ];
     Composite.add(world, walls);
 
-    // Create skill chips
-    var skillChips = document.querySelectorAll('.skill-chip');
-    var matterBodies = [];
-
-    skillChips.forEach(function (chip) {
-        console.log('Creating chip for:', chip.textContent); // Debugging log
-        var rect = chip.getBoundingClientRect();
-        var body = Bodies.rectangle(rect.left + rect.width / 2, rect.top + rect.height / 2, rect.width, rect.height, {
-            render: {
-                fillStyle: '#007bff'
-            }
-        });
-        chip.style.display = 'block'; // Ensure visibility
-        body.isStatic = true; // Make them static initially
-        Composite.add(world, body);
-        matterBodies.push({ element: chip, body: body });
-
-        // Manual drag outside canvas
-        chip.addEventListener('mousedown', function (e) {
-            chip.style.position = 'absolute';
-            chip.style.zIndex = 1000;
-
-            function onMouseMove(event) {
-                chip.style.left = event.pageX - chip.offsetWidth / 2 + 'px';
-                chip.style.top = event.pageY - chip.offsetHeight / 2 + 'px';
-            }
-
-            document.addEventListener('mousemove', onMouseMove);
-
-            chip.onmouseup = function () {
-                document.removeEventListener('mousemove', onMouseMove);
-                chip.onmouseup = null;
-            };
-
-            chip.ondragstart = function () {
-                return false;
-            };
-        });
-
-        // Ensure chips are visible and draggable
-        body.render.sprite = {
-            texture: chip.innerHTML,
-            xScale: 1,
-            yScale: 1
-        };
-    });
-
     // Add mouse control
     var mouse = Mouse.create(render.canvas);
     var mouseConstraint = MouseConstraint.create(engine, {
@@ -103,6 +56,47 @@ window.addEventListener('load', function () {
         }
     });
     Composite.add(world, mouseConstraint);
+
+    // Create skill chips
+    var skillChips = document.querySelectorAll('.skill-chip');
+    var matterBodies = [];
+
+    skillChips.forEach(function (chip) {
+        console.log('Creating chip for:', chip.textContent); // Debugging log
+        var rect = chip.getBoundingClientRect();
+        var body = Bodies.rectangle(rect.left + rect.width / 2, rect.top + rect.height / 2, rect.width, rect.height, {
+            render: {
+                fillStyle: '#007bff'
+            }
+        });
+        Composite.add(world, body);
+        matterBodies.push({ element: chip, body: body });
+
+        // Make skill chips draggable
+        Events.on(mouseConstraint, 'mousedown', function (event) {
+            if (Matter.Bounds.contains(body.bounds, event.mouse.position)) {
+                body.isStatic = false;
+                chip.style.position = 'absolute'; // Make position absolute when dragging
+                chip.style.zIndex = 1000;
+
+                function onMouseMove(event) {
+                    chip.style.left = event.pageX - chip.offsetWidth / 2 + 'px';
+                    chip.style.top = event.pageY - chip.offsetHeight / 2 + 'px';
+                }
+
+                document.addEventListener('mousemove', onMouseMove);
+
+                chip.onmouseup = function () {
+                    document.removeEventListener('mousemove', onMouseMove);
+                    chip.onmouseup = null;
+                };
+
+                chip.ondragstart = function () {
+                    return false;
+                };
+            }
+        });
+    });
 
     // Keep the mouse in sync with rendering
     render.mouse = mouse;
