@@ -44,19 +44,6 @@ window.addEventListener('load', function () {
     ];
     Composite.add(world, walls);
 
-    // Add mouse control
-    var mouse = Mouse.create(render.canvas);
-    var mouseConstraint = MouseConstraint.create(engine, {
-        mouse: mouse,
-        constraint: {
-            stiffness: 0.2,
-            render: {
-                visible: false
-            }
-        }
-    });
-    Composite.add(world, mouseConstraint);
-
     // Create skill chips
     var skillChips = document.querySelectorAll('.skill-chip');
     var matterBodies = [];
@@ -73,13 +60,6 @@ window.addEventListener('load', function () {
         body.isStatic = true; // Make them static initially
         Composite.add(world, body);
         matterBodies.push({ element: chip, body: body });
-
-        // Make skill chips draggable
-        Events.on(mouseConstraint, 'mousedown', function (event) {
-            if (Matter.Bounds.contains(body.bounds, event.mouse.position)) {
-                body.isStatic = false;
-            }
-        });
 
         // Manual drag outside canvas
         chip.addEventListener('mousedown', function (e) {
@@ -102,7 +82,27 @@ window.addEventListener('load', function () {
                 return false;
             };
         });
+
+        // Ensure chips are visible and draggable
+        body.render.sprite = {
+            texture: chip.innerHTML,
+            xScale: 1,
+            yScale: 1
+        };
     });
+
+    // Add mouse control
+    var mouse = Mouse.create(render.canvas);
+    var mouseConstraint = MouseConstraint.create(engine, {
+        mouse: mouse,
+        constraint: {
+            stiffness: 0.2,
+            render: {
+                visible: false
+            }
+        }
+    });
+    Composite.add(world, mouseConstraint);
 
     // Keep the mouse in sync with rendering
     render.mouse = mouse;
