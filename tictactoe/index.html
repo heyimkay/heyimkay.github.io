@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="style.css"/>
+        <title>TicTacToe</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <img src="assets/title.png" alt="Tic Tac Toe" class="title">
+<div id="scoreboard">
+  <div class="scorepair">
+    <span class="label">win:</span>
+    <span id="wins">0</span>
+  </div>
+  <div class="scorepair">
+    <span class="label">tie:</span>
+    <span id="ties">0</span>
+  </div>
+  <div class="scorepair">
+    <span class="label">lose:</span>
+    <span id="losses">0</span>
+  </div>
+</div>
+
+
+        <div class="background"></div>
+        <div class="plate"></div>
+        <div class="waffle"></div>
+        <div class="table">
+            <div class="row">
+                <div class="column" data-i=0 data-j=0></div>
+                <div class="column" data-i=0 data-j=1></div>
+                <div class="column" data-i=0 data-j=2></div>
+            </div>
+            <div class="row">
+                <div class="column" data-i=1 data-j=0></div>
+                <div class="column" data-i=1 data-j=1></div>
+                <div class="column" data-i=1 data-j=2></div>
+            </div>
+            <div class="row">
+                <div class="column" data-i=2 data-j=0></div>
+                <div class="column" data-i=2 data-j=1></div>
+                <div class="column" data-i=2 data-j=2></div>
+            </div>
+        </div>
+        <div>
+            <button id="restart">Restart</button>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
