@@ -79,7 +79,7 @@ button {
 
 .waffle {
     position: absolute;
-    top: 54%;
+    top: 56%;
     left: 50%;
     width: 300px;
     height: 300px;
@@ -104,7 +104,7 @@ button {
     margin: auto;
 }
 .title {
-    width: 345px;
+    width: 360px;
     position: relative;
     z-index: 4;
 }
