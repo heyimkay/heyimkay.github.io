@@ -12,7 +12,7 @@ body {
 }
 
 #scoreboard {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     font-family: "Pixelify Sans", sans-serif;
     position: relative;
     z-index: 4;
