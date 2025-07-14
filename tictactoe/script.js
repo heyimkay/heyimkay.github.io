@@ -101,8 +101,8 @@ $(document).ready(function() {
     }
 
     function moveCOMPUTER() {
-        // 40% chance to make a random move
-        if (Math.random() < 0.4) {
+        // 30% chance to make a random move
+        if (Math.random() < 0.3) {
             const emptyCells = [];
             for (let i = 0; i < 3; i++) {
                 for (let j = 0; j < 3; j++) {
