@@ -2,49 +2,59 @@ html,body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  color: #fff;
-    height: 100%;
-    position: relative;
+  color: #000;
+  height: 100%;
+  position: relative;
+  background-color: #F6F3EC;
+  text-align: center;
 }
 
-#gradient-canvas {
+@font-face {
+  font-family: 'TokyoDreams';
+  src: url('./fonts/TokyoDreams-Regular.woff2') format('woff2'),
+      url('./fonts/TokyoDreams-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*#gradient-canvas {
   width:100vw;
   height:100vh;
   --gradient-color-1: #1775D5; 
   --gradient-color-2: #0057B2; 
   --gradient-color-3: #003C91;  
   --gradient-color-4: #002371;
-}
+}*/
 
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-    position: relative;
-text-align: center;
-    height: 100%;
+  position: relative;
+  text-align: center;
+  height: 100%;
 }
 
 .intro{
-    position: absolute; 
-    margin: 0 auto;
-
+  margin: 0 auto;
 }
 
 
 .header h1 {
-  font-family: "Cormorant", serif;
-  font-size: 64px;
+  font-family: 'TokyoDreams', "Cormorant", serif;
+  font-size: 132px;
   font-weight: 300;
-  color: #fff;
-  max-width: 680px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 10px;
 }
 
 .header p {
-  font-size: 18px;
+  font-size: 16px;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: 170px;
+  text-align: left; 
 }
 
 .header .btn {
@@ -63,17 +73,35 @@ text-align: center;
     color: #5094F8;
 }
 
-
 .profile-content {
   position: relative;
 }
 
-.profile-image {
-  max-width: 280px;
-  margin-bottom: 20px;
-  position: absolute;
-  left: 610px;
-  top: -120px;
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 6rem;
+}
+
+.project-card {
+  background: #eee;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  max-width: 320px;
+  margin: auto;
+}
+
+.project-card h2 {
+  margin-top: 0;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #333;
+  text-decoration: none;
 }
 
 
@@ -86,6 +114,8 @@ text-align: center;
         text-align: center;
     }
     .header p {
-  font-size: 16px;
+      font-size: 16px;
+      text-align: center;
+      margin-right: 0;
 }
 }
